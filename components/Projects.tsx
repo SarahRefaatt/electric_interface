@@ -1618,7 +1618,7 @@ export default function Projects() {
                                                 {project.tags.map((tag, idx) => (
                                                     <span
                                                         key={idx}
-                                                        className="text-sm bg-gradient-to-r from-green-900/50 to-black text-white px-4 py-2 rounded-lg font-medium border border-green-800/50"
+                                                        className="text-sm bg-gradient-to-r from-green-800 to-black text-white px-4 py-2 rounded-lg font-medium border border-green-800/50"
                                                         style={{
                                                             transform: "translateZ(20px)",
                                                             boxShadow: "0 4px 6px rgba(0, 0, 0, 0.3)"
@@ -1642,7 +1642,7 @@ export default function Projects() {
                                 {/* Text Content */}
                                 <div className="relative z-20">
                                     <div className="relative inline-block mb-12">
-                                        <div className="absolute -inset-4 bg-gradient-to-r from-green-800/10 to-green-900/10 blur-xl rounded-full"></div>
+                                        <div className="absolute -inset-4 bg-gradient-to-r from-green-900  to-emerald-800 blur-xl rounded-full"></div>
                                         <h2 className="text-5xl md:text-6xl font-bold leading-tight relative">
                                             <span className="bg-gradient-to-r from-green-900 via-green-500 to-emerald-800 bg-clip-text text-transparent">
                                                 Helping visionaries
@@ -1661,11 +1661,11 @@ export default function Projects() {
 
                                         <div className="grid grid-cols-2 gap-6">
                                             <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-white/10 backdrop-blur-sm">
-                                                <div className="text-4xl font-bold text-green-500 mb-3">360°</div>
+                                                <div className="text-4xl font-bold text-green-900 mb-3">360°</div>
                                                 <div className="text-gray-300 font-medium">Holistic Creative Strategy</div>
                                             </div>
                                             <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-white/10 backdrop-blur-sm">
-                                                <div className="text-4xl font-bold text-green-600 mb-3">24/7</div>
+                                                <div className="text-4xl font-bold text-green-800 mb-3">24/7</div>
                                                 <div className="text-gray-300 font-medium">Dedicated Support</div>
                                             </div>
                                         </div>
@@ -1684,7 +1684,7 @@ export default function Projects() {
                                     >
                                         {/* Main Ball */}
                                         <div
-                                            className="absolute inset-0 rounded-full bg-gradient-to-br from-green-600 via-green-700 to-emerald-800"
+                                            className="absolute inset-0 rounded-full bg-gradient-to-br from-green-900 via-green-700 to-emerald-800"
                                             style={{
                                                 transformStyle: "preserve-3d",
                                                 boxShadow: `
@@ -1711,21 +1711,21 @@ export default function Projects() {
 
                                         {/* Orbiting rings */}
                                         <div
-                                            className="absolute inset-[-50px] rounded-full border border-green-600/30"
+                                            className="absolute inset-[-50px] rounded-full border border-green-800"
                                             style={{
                                                 animation: "spin 10s linear infinite",
                                                 transformStyle: "preserve-3d",
                                             }}
                                         ></div>
                                         <div
-                                            className="absolute inset-[-80px] rounded-full border border-green-700/20"
+                                            className="absolute inset-[-80px] rounded-full border border-green-700"
                                             style={{
                                                 animation: "spin 15s linear infinite reverse",
                                                 transformStyle: "preserve-3d",
                                             }}
                                         ></div>
                                         <div
-                                            className="absolute inset-[-110px] rounded-full border border-green-800/10"
+                                            className="absolute inset-[-110px] rounded-full border border-green-900"
                                             style={{
                                                 animation: "spin 20s linear infinite",
                                                 transformStyle: "preserve-3d",
@@ -1736,7 +1736,7 @@ export default function Projects() {
                                         {[1, 2, 3, 4].map((i) => (
                                             <div
                                                 key={i}
-                                                className="absolute w-8 h-8 rounded-full bg-gradient-to-r from-green-400 to-green-600"
+                                                className="absolute w-8 h-8 rounded-full bg-gradient-to-r from-green-900  to-emerald-800 "
                                                 style={{
                                                     left: `${Math.cos(i * Math.PI / 2) * 150}px`,
                                                     top: `${Math.sin(i * Math.PI / 2) * 150}px`,
