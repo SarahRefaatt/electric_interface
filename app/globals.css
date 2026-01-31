@@ -1,26 +1,291 @@
 @import "tailwindcss";
 
+@theme {
+  --color-light: #ffffff;
+  --color-dark: #101011;
+  --color-gray: #CBCBCB;
+  --color-dark-gray: #bbbbbb;
+  --color-fade-light: #383838;
+  --color-dark-blue: #141334;
+  --color-accent: #32A4C3;
+  --color-error: #FD4E28;
+
+  --font-mono: "PPSupplyMono", monospace;
+  --font-sans: "PPSupplySans", sans-serif;
+
+  --breakpoint-3xl: 1920px;
+  --breakpoint-2xl: 1440px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-md: 768px;
+  --breakpoint-sm: 640px;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-mono-regular: "PPSupplyMono", monospace;
+  --font-mono-ultralight: "PPSupplyMono", monospace;
+  --font-sans-regular: "PPSupplySans", sans-serif;
+  --font-sans-ultralight: "PPSupplySans", sans-serif;
+
+  /* HLE Variables */
+  --color-light: #ffffff;
+  --color-dark: #101011;
+  --color-gray: #CBCBCB;
+  --color-grey: #CBCBCB;
+  --color-dark-gray: #bbbbbb;
+  --color-dark-grey: #bbbbbb;
+  --color-fade-light: #383838;
+  --color-dark-blue: #141334;
+  --color-accent: #32A4C3;
+  --color-error: #FD4E28;
+
+  --transition: 0.5s ease-in-out;
+  --transition-300: 0.3s ease-in-out;
+  --timing-function: cubic-bezier(0.2, 0, 0.8, 1);
+
+  --link-padding: 0.4rem;
+  --link-margin: -0.4rem;
+  --container-padding-mobile: 1.6rem;
+  --container-padding-mobile-alt: 2rem;
+  --container-padding-mobile-negative: -1.6rem;
+  --container-padding: 11.7rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@media (max-width: 1919px) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --container-padding: 8.3rem;
   }
 }
 
+@media (max-width: 1439px) {
+  :root {
+    --container-padding: 6.6rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --container-padding: 4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --container-padding: 4.2666666667vw;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+  font-family: var(--font-sans);
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: crosshair;
+}
+
+/* Typography from site.html */
+h1,
+.h1 {
+  line-height: 1;
+  font-size: 13.4rem;
+  font-weight: 400;
+}
+
+@media (min-width: 1920px) {
+
+  h1,
+  .h1 {
+    font-size: 17.4rem;
+  }
+}
+
+@media (max-width: 1439px) {
+
+  h1,
+  .h1 {
+    font-size: 9rem;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  h1,
+  .h1 {
+    font-size: 6.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+
+  h1,
+  .h1 {
+    font-size: 4.8rem;
+  }
+}
+
+h2,
+.h2 {
+  line-height: 1;
+  font-size: 7.7rem;
+  font-weight: 400;
+}
+
+@media (min-width: 1920px) {
+
+  h2,
+  .h2 {
+    font-size: 8.7rem;
+  }
+}
+
+@media (max-width: 1439px) {
+
+  h2,
+  .h2 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  h2,
+  .h2 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 767px) {
+
+  h2,
+  .h2 {
+    font-size: 4.1rem;
+  }
+}
+
+h3,
+.h3 {
+  line-height: 1;
+  font-size: 4.7rem;
+  font-weight: 400;
+}
+
+@media (min-width: 1920px) {
+
+  h3,
+  .h3 {
+    font-size: 5.7rem;
+  }
+}
+
+@media (max-width: 1439px) {
+
+  h3,
+  .h3 {
+    font-size: 3.4rem;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  h3,
+  .h3 {
+    font-size: 3.4rem;
+  }
+}
+
+@media (max-width: 767px) {
+
+  h3,
+  .h3 {
+    font-size: 2.4rem;
+  }
+}
+
+.p1 {
+  font-family: var(--font-mono);
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.p2 {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+@media (min-width: 1920px) {
+  .p2 {
+    font-size: 1.7rem;
+  }
+}
+
+.a1 {
+  font-family: var(--font-mono);
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+@media (min-width: 1920px) {
+  .a1 {
+    font-size: 2.1rem;
+  }
+}
+
+/* Utilities */
+.hover-fadeout {
+  transition: var(--transition);
+}
+
+@media (min-width: 1280px) {
+  .hover-fadeout:hover {
+    opacity: 0.5;
+  }
+}
+
+.hover-underline {
+  transition: var(--transition);
+  position: relative;
+}
+
+.hover-underline:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: calc(100% - 0.8rem);
+  height: 1px;
+  background-color: white;
+  bottom: 0px;
+  /* Adjusted from site.html 1rem to fit generic */
+  left: 0.4rem;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: inherit;
+}
+
+@media (min-width: 1280px) {
+  .hover-underline:hover:after {
+    transform: scaleX(1);
+  }
+}
+
+/* Custom Scrollbar hide */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
