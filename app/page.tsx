@@ -26,7 +26,7 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-
+  //updatedddd
   /* -------------------- Render -------------------- */
   return (
     <ThemeProvider>
