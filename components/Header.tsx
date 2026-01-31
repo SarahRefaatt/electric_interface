@@ -87,11 +87,11 @@ export default function Header() {
             </nav>
 
             {/* Theme */}
-            <div className="pointer-events-auto">
+            {/* <div className="pointer-events-auto">
                 <button onClick={toggleTheme} className="font-mono text-[1.7rem]">
                     {theme === "day" ? "Switch Night" : "Switch Day"}
                 </button>
-            </div>
+            </div> */}
         </header>
     );
 }

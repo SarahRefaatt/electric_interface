@@ -105,7 +105,7 @@ export default function Preloader() {
     return (
         <div
             ref={containerRef}
-            className="fixed inset-0 z-[10000] flex flex-col justify-between bg-dark p-[4.8rem] text-light sm:p-[4rem] text-[11.8rem] leading-[0.99] font-normal overflow-hidden"
+            className="fixed inset-0 z-[10000] flex flex-col justify-between bg-dark p-[4.8rem] text-light sm:p-[4rem] text-[6rem] sm:text-[11.8rem] leading-[0.99] font-normal overflow-hidden"
         >
             <div ref={textRef} className="max-w-[123.6rem] relative">
                 {displayText}
@@ -119,5 +119,7 @@ export default function Preloader() {
                 />
             </div>
         </div>
+
+
     );
 }
